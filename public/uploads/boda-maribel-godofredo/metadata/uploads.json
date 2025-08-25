@@ -1,0 +1,89 @@
+[
+  {
+    "id": "upload_1756077982424_sb68oxlw7",
+    "timestamp": "2025-08-24T23:26:22.424Z",
+    "date": "2025-08-24",
+    "uploaderName": "Anónimo",
+    "eventMoment": "No especificado",
+    "comment": "",
+    "totalFiles": 1,
+    "totalSize": 486502,
+    "files": [
+      {
+        "id": "1756077982423_x1tghy7z2",
+        "originalName": "bandaColores1.jpg",
+        "fileName": "1756077982413_knebko9ub_bandacolores1.jpg",
+        "size": 486502,
+        "type": "image/jpeg",
+        "paths": {
+          "original": "/uploads/boda-maribel-godofredo/fotos/2025-08-24/original/1756077982413_knebko9ub_bandacolores1.jpg",
+          "compressed": "/uploads/boda-maribel-godofredo/fotos/2025-08-24/original/1756077982413_knebko9ub_bandacolores1.jpg",
+          "thumbnail": "/uploads/boda-maribel-godofredo/fotos/2025-08-24/original/1756077982413_knebko9ub_bandacolores1.jpg"
+        },
+        "uploadedAt": "2025-08-24T23:26:22.423Z",
+        "uploaderName": "Anónimo",
+        "eventMoment": "No especificado",
+        "comment": ""
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "upload_1756082488482_bmgu27hmc",
+    "timestamp": "2025-08-25T00:41:28.482Z",
+    "date": "2025-08-25",
+    "uploaderName": "Anónimo",
+    "eventMoment": "No especificado",
+    "comment": "",
+    "totalFiles": 1,
+    "totalSize": 88,
+    "files": [
+      {
+        "id": "1756082488481_zaa4qbxqp",
+        "originalName": "test.png",
+        "fileName": "1756082488418_a55kvm96v_test.png",
+        "size": 88,
+        "type": "image/png",
+        "paths": {
+          "original": "/uploads/boda-maribel-godofredo/fotos/2025-08-25/original/1756082488418_a55kvm96v_test.png",
+          "compressed": "/uploads/boda-maribel-godofredo/fotos/2025-08-25/compressed/1756082488418_a55kvm96v_test.webp",
+          "thumbnail": "/uploads/boda-maribel-godofredo/thumbnails/2025-08-25/1756082488418_a55kvm96v_test_thumb.webp"
+        },
+        "uploadedAt": "2025-08-25T00:41:28.481Z",
+        "uploaderName": "Anónimo",
+        "eventMoment": "No especificado",
+        "comment": ""
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "upload_1756082577467_gsk8howd9",
+    "timestamp": "2025-08-25T00:42:57.467Z",
+    "date": "2025-08-25",
+    "uploaderName": "Anónimo",
+    "eventMoment": "No especificado",
+    "comment": "",
+    "totalFiles": 1,
+    "totalSize": 375283,
+    "files": [
+      {
+        "id": "1756082577466_lu0kjg3vf",
+        "originalName": "un_par_de_novios_frente_al_altar.jpeg",
+        "fileName": "1756082577415_09xrhyyni_un_par_de_novios_frente_al_altar.jpeg",
+        "size": 375283,
+        "type": "image/jpeg",
+        "paths": {
+          "original": "/uploads/boda-maribel-godofredo/fotos/2025-08-25/original/1756082577415_09xrhyyni_un_par_de_novios_frente_al_altar.jpeg",
+          "compressed": "/uploads/boda-maribel-godofredo/fotos/2025-08-25/original/1756082577415_09xrhyyni_un_par_de_novios_frente_al_altar.jpeg",
+          "thumbnail": "/uploads/boda-maribel-godofredo/fotos/2025-08-25/original/1756082577415_09xrhyyni_un_par_de_novios_frente_al_altar.jpeg"
+        },
+        "uploadedAt": "2025-08-25T00:42:57.466Z",
+        "uploaderName": "Anónimo",
+        "eventMoment": "No especificado",
+        "comment": ""
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+  }
+]

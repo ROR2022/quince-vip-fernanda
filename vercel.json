@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "app/api/upload-fotos/route.ts": {
+      "maxDuration": 60
+    },
+    "app/api/upload-fotos-simple/route.ts": {
+      "maxDuration": 60
+    },
+    "app/api/fotos-galeria/route.ts": {
+      "maxDuration": 30
+    }
+  },
+  "outputDirectory": ".next"
+}
