@@ -30,21 +30,21 @@ interface HybridPhoto {
   isPublic: boolean;
 }
 
-// Paleta VIP Mexicana (importada desde constants)
+// Paleta Aurora Pastel para Quinceañera VIP
 const VIP_COLORS = {
-  verdeEsmeralda: '#0D6B4B',
-  rojoVino: '#8B1C26',
-  dorado: '#C2A878',
-  marfil: '#F8F5F0',
-  marfilSuave: '#FAF7F2',
-  verdeOscuro: '#0A5A3C',
-  verdeBosque: '#6B8C5A',
-  rojoCardenal: '#7A1B24',
-  oroAntiguo: '#B8A070'
+  rosaAurora: '#FFB3D9',
+  lavandaAurora: '#E6D9FF',
+  oroAurora: '#FFF2CC',
+  blancoSeda: '#FDFCFC',
+  cremaSuave: '#FAF8F5',
+  rosaIntensa: '#FF8FD1',
+  lavandaIntensa: '#D9CAFF',
+  oroIntensio: '#FFEC99',
+  rosaDelicada: '#FFCCE6'
 };
 
 /**
- * Componente para mostrar fotos subidas dinámicamente por los invitados
+ * Componente para mostrar fotos subidas dinámicamente por los invitados a la quinceañera
  */
 const DinamicGallery: React.FC = () => {
   const { 
@@ -126,29 +126,29 @@ const DinamicGallery: React.FC = () => {
       <section 
         className="py-16 px-4 text-center"
         style={{
-          background: `linear-gradient(135deg, ${VIP_COLORS.marfil} 0%, ${VIP_COLORS.marfilSuave} 100%)`,
+          background: `linear-gradient(135deg, ${VIP_COLORS.blancoSeda} 0%, ${VIP_COLORS.cremaSuave} 100%)`,
         }}
       >
         <div className="max-w-2xl mx-auto">
           <div 
-            className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 vip-pulse-aurora"
             style={{
-              background: `linear-gradient(135deg, ${VIP_COLORS.dorado}, ${VIP_COLORS.oroAntiguo})`
+              background: `linear-gradient(135deg, ${VIP_COLORS.oroAurora}, ${VIP_COLORS.oroIntensio})`
             }}
           >
-            <Camera size={32} style={{ color: VIP_COLORS.verdeOscuro }} />
+            <Camera size={32} style={{ color: VIP_COLORS.rosaIntensa }} />
           </div>
           
           <h3 
             className="text-2xl font-semibold mb-4"
-            style={{ color: VIP_COLORS.verdeEsmeralda }}
+            style={{ color: VIP_COLORS.rosaAurora }}
           >
             ¡Sé el primero en compartir!
           </h3>
           
           <p 
             className="text-lg"
-            style={{ color: VIP_COLORS.verdeBosque }}
+            style={{ color: VIP_COLORS.rosaIntensa }}
           >
             Aún no hay fotos subidas. Usa el FotoUploader para compartir tus mejores momentos.
           </p>
@@ -161,23 +161,23 @@ const DinamicGallery: React.FC = () => {
     <section 
       className="py-16 px-4 relative overflow-hidden"
       style={{
-        background: `linear-gradient(135deg, ${VIP_COLORS.marfil} 0%, ${VIP_COLORS.marfilSuave} 50%, ${VIP_COLORS.marfil} 100%)`,
+        background: `linear-gradient(135deg, ${VIP_COLORS.blancoSeda} 0%, ${VIP_COLORS.cremaSuave} 50%, ${VIP_COLORS.blancoSeda} 100%)`,
       }}
     >
-      {/* Elementos decorativos VIP */}
+      {/* Elementos decorativos Aurora Pastel */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 right-10 w-32 h-32 rounded-full" style={{ backgroundColor: VIP_COLORS.verdeEsmeralda }}></div>
-        <div className="absolute bottom-10 left-10 w-24 h-24 rounded-full" style={{ backgroundColor: VIP_COLORS.rojoVino }}></div>
+        <div className="absolute top-10 right-10 w-32 h-32 rounded-full vip-pulse-aurora" style={{ backgroundColor: VIP_COLORS.rosaAurora }}></div>
+        <div className="absolute bottom-10 left-10 w-24 h-24 rounded-full vip-shimmer-aurora" style={{ backgroundColor: VIP_COLORS.lavandaAurora }}></div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <div 
-            className="inline-block text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-xl border-2"
+            className="inline-block text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-xl border-2 vip-shimmer-aurora"
             style={{ 
-              background: `linear-gradient(135deg, ${VIP_COLORS.verdeEsmeralda}, ${VIP_COLORS.rojoVino})`,
-              borderColor: `${VIP_COLORS.dorado}40`
+              background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.lavandaAurora})`,
+              borderColor: `${VIP_COLORS.oroAurora}40`
             }}
           >
             📸 Galería Colaborativa
@@ -185,7 +185,7 @@ const DinamicGallery: React.FC = () => {
           
           <h2 
             className="text-4xl md:text-5xl font-light mb-4"
-            style={{ color: VIP_COLORS.verdeEsmeralda }}
+            style={{ color: VIP_COLORS.rosaAurora }}
           >
             Momentos Compartidos
           </h2>
@@ -193,7 +193,7 @@ const DinamicGallery: React.FC = () => {
           {/* {stats && (
             <p 
               className="text-xl mb-2 font-medium"
-              style={{ color: VIP_COLORS.verdeBosque }}
+              style={{ color: VIP_COLORS.rosaIntensa }}
             >
               {stats.totalPhotos} foto{stats.totalPhotos !== 1 ? 's' : ''} compartida{stats.totalPhotos !== 1 ? 's' : ''} por {stats.uploaders.length} invitado{stats.uploaders.length !== 1 ? 's' : ''}
               <br />
@@ -212,8 +212,8 @@ const DinamicGallery: React.FC = () => {
             disabled={loading}
             className="flex items-center px-4 py-2 rounded-lg border-2 transition-all duration-300 hover:scale-105"
             style={{
-              borderColor: VIP_COLORS.dorado,
-              color: VIP_COLORS.verdeEsmeralda,
+              borderColor: VIP_COLORS.oroAurora,
+              color: VIP_COLORS.rosaAurora,
               backgroundColor: 'transparent'
             }}
           >
@@ -242,7 +242,7 @@ const DinamicGallery: React.FC = () => {
             className="flex items-center px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
             style={{
               display: 'none',
-              background: `linear-gradient(135deg, ${VIP_COLORS.verdeEsmeralda}, ${VIP_COLORS.verdeBosque})`,
+              background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.rosaIntensa})`,
               color: 'white'
             }}
           >
@@ -256,8 +256,8 @@ const DinamicGallery: React.FC = () => {
           <div 
             className="mb-8 p-6 rounded-2xl border-2"
             style={{
-              background: `linear-gradient(135deg, ${VIP_COLORS.marfilSuave} 0%, ${VIP_COLORS.marfil} 100%)`,
-              borderColor: `${VIP_COLORS.dorado}60`
+              background: `linear-gradient(135deg, ${VIP_COLORS.cremaSuave} 0%, ${VIP_COLORS.blancoSeda} 100%)`,
+              borderColor: `${VIP_COLORS.oroAurora}60`
             }}
           >
             <div className="grid md:grid-cols-3 gap-6">
@@ -265,7 +265,7 @@ const DinamicGallery: React.FC = () => {
               <div>
                 <label 
                   className="block text-sm font-semibold mb-2"
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 >
                   <Calendar size={16} className="inline mr-2" />
                   Momento del Evento
@@ -275,8 +275,8 @@ const DinamicGallery: React.FC = () => {
                   onChange={(e) => setFilters({ eventMoment: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border-2 transition-colors duration-200 focus:outline-none"
                   style={{
-                    borderColor: `${VIP_COLORS.dorado}60`,
-                    backgroundColor: VIP_COLORS.marfilSuave
+                    borderColor: `${VIP_COLORS.oroAurora}60`,
+                    backgroundColor: VIP_COLORS.cremaSuave
                   }}
                 >
                   <option value="all">Todos los momentos</option>
@@ -290,7 +290,7 @@ const DinamicGallery: React.FC = () => {
               <div>
                 <label 
                   className="block text-sm font-semibold mb-2"
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 >
                   <Users size={16} className="inline mr-2" />
                   Subido por
@@ -300,8 +300,8 @@ const DinamicGallery: React.FC = () => {
                   onChange={(e) => setFilters({ uploader: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border-2 transition-colors duration-200 focus:outline-none"
                   style={{
-                    borderColor: `${VIP_COLORS.dorado}60`,
-                    backgroundColor: VIP_COLORS.marfilSuave
+                    borderColor: `${VIP_COLORS.oroAurora}60`,
+                    backgroundColor: VIP_COLORS.cremaSuave
                   }}
                 >
                   <option value="all">Todos los invitados</option>
@@ -315,7 +315,7 @@ const DinamicGallery: React.FC = () => {
               <div>
                 <label 
                   className="block text-sm font-semibold mb-2"
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 >
                   <Server size={16} className="inline mr-2" />
                   Fuente de Almacenamiento
@@ -325,8 +325,8 @@ const DinamicGallery: React.FC = () => {
                   onChange={(e) => setFilters({ source: e.target.value as 'all' | 'local' | 'cloudinary' })}
                   className="w-full px-4 py-3 rounded-lg border-2 transition-colors duration-200 focus:outline-none"
                   style={{
-                    borderColor: `${VIP_COLORS.dorado}60`,
-                    backgroundColor: VIP_COLORS.marfilSuave
+                    borderColor: `${VIP_COLORS.oroAurora}60`,
+                    backgroundColor: VIP_COLORS.cremaSuave
                   }}
                 >
                   <option value="all">Todas las fuentes</option>
@@ -341,8 +341,8 @@ const DinamicGallery: React.FC = () => {
         {/* Estado de carga */}
         {loading && (
           <div className="text-center py-12">
-            <Loader2 size={48} className="animate-spin mx-auto mb-4" style={{ color: VIP_COLORS.verdeEsmeralda }} />
-            <p style={{ color: VIP_COLORS.verdeBosque }}>Cargando fotos...</p>
+            <Loader2 size={48} className="animate-spin mx-auto mb-4 vip-pulse-aurora" style={{ color: VIP_COLORS.rosaAurora }} />
+            <p style={{ color: VIP_COLORS.rosaIntensa }}>Cargando fotos...</p>
           </div>
         )}
 
@@ -351,13 +351,13 @@ const DinamicGallery: React.FC = () => {
           <div 
             className="p-4 rounded-lg border-l-4 mb-6"
             style={{
-              backgroundColor: `${VIP_COLORS.rojoVino}10`,
-              borderColor: VIP_COLORS.rojoVino
+              backgroundColor: `${VIP_COLORS.lavandaAurora}10`,
+              borderColor: VIP_COLORS.lavandaAurora
             }}
           >
             <div className="flex items-center">
-              <AlertCircle size={20} style={{ color: VIP_COLORS.rojoVino }} className="mr-2" />
-              <p style={{ color: VIP_COLORS.rojoVino }}>{error}</p>
+              <AlertCircle size={20} style={{ color: VIP_COLORS.lavandaAurora }} className="mr-2" />
+              <p style={{ color: VIP_COLORS.lavandaAurora }}>{error}</p>
             </div>
           </div>
         )}
@@ -367,19 +367,19 @@ const DinamicGallery: React.FC = () => {
           <div 
             className="p-4 rounded-lg border-l-4 mb-6"
             style={{
-              backgroundColor: `${VIP_COLORS.rojoVino}10`,
-              borderColor: VIP_COLORS.rojoVino
+              backgroundColor: `${VIP_COLORS.lavandaAurora}10`,
+              borderColor: VIP_COLORS.lavandaAurora
             }}
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <Trash2 size={20} style={{ color: VIP_COLORS.rojoVino }} className="mr-2" />
-                <p style={{ color: VIP_COLORS.rojoVino }}>Error al eliminar: {deleteError}</p>
+                <Trash2 size={20} style={{ color: VIP_COLORS.lavandaAurora }} className="mr-2" />
+                <p style={{ color: VIP_COLORS.lavandaAurora }}>Error al eliminar: {deleteError}</p>
               </div>
               <button
                 onClick={clearDeleteError}
                 className="text-sm underline hover:no-underline"
-                style={{ color: VIP_COLORS.rojoVino }}
+                style={{ color: VIP_COLORS.lavandaAurora }}
               >
                 Cerrar
               </button>
@@ -423,7 +423,7 @@ const DinamicGallery: React.FC = () => {
                       className="w-8 h-8 rounded-full flex items-center justify-center"
                       style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}
                     >
-                      <Loader2 size={16} className="animate-spin" style={{ color: VIP_COLORS.rojoVino }} />
+                      <Loader2 size={16} className="animate-spin" style={{ color: VIP_COLORS.lavandaAurora }} />
                     </div>
                   ) : (
                     <button
@@ -431,7 +431,7 @@ const DinamicGallery: React.FC = () => {
                       className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
                       style={{ 
                         backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                        color: VIP_COLORS.rojoVino
+                        color: VIP_COLORS.lavandaAurora
                       }}
                       aria-label={`Eliminar foto ${photo.originalName}`}
                     >
@@ -452,7 +452,7 @@ const DinamicGallery: React.FC = () => {
 
                 {/* Icono de love en la esquina */}
                 <div className="absolute top-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Heart size={20} style={{ color: VIP_COLORS.rojoVino }} fill="white" />
+                  <Heart size={20} style={{ color: VIP_COLORS.rosaAurora }} fill="white" />
                 </div>
               </div>
             ))}
@@ -465,8 +465,8 @@ const DinamicGallery: React.FC = () => {
             href="#top"
             className="inline-flex items-center px-4 py-2 rounded-lg border-2 transition-all duration-300 hover:scale-105"
             style={{
-              borderColor: VIP_COLORS.dorado,
-              color: VIP_COLORS.verdeEsmeralda,
+              borderColor: VIP_COLORS.oroAurora,
+              color: VIP_COLORS.rosaAurora,
               backgroundColor: 'transparent'
             }}
           >
@@ -482,8 +482,8 @@ const DinamicGallery: React.FC = () => {
               disabled={true}
               className="flex items-center px-4 py-2 rounded-lg border-2 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
               style={{
-                borderColor: VIP_COLORS.dorado,
-                color: VIP_COLORS.verdeEsmeralda,
+                borderColor: VIP_COLORS.oroAurora,
+                color: VIP_COLORS.rosaAurora,
                 backgroundColor: 'transparent'
               }}
             >
@@ -494,7 +494,7 @@ const DinamicGallery: React.FC = () => {
             <span 
               className="px-4 py-2 rounded-lg"
               style={{
-                background: `linear-gradient(135deg, ${VIP_COLORS.verdeEsmeralda}, ${VIP_COLORS.verdeBosque})`,
+                background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.rosaIntensa})`,
                 color: 'white'
               }}
             >
@@ -505,8 +505,8 @@ const DinamicGallery: React.FC = () => {
               disabled={true}
               className="flex items-center px-4 py-2 rounded-lg border-2 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
               style={{
-                borderColor: VIP_COLORS.dorado,
-                color: VIP_COLORS.verdeEsmeralda,
+                borderColor: VIP_COLORS.oroAurora,
+                color: VIP_COLORS.rosaAurora,
                 backgroundColor: 'transparent'
               }}
             >
@@ -533,7 +533,7 @@ const DinamicGallery: React.FC = () => {
               className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                color: VIP_COLORS.verdeBosque,
+                color: VIP_COLORS.rosaIntensa,
                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
               }}
               aria-label="Cerrar modal"
@@ -554,42 +554,42 @@ const DinamicGallery: React.FC = () => {
               </div>
               
               {/* Info */}
-              <div className="md:w-80 p-6 border-l" style={{ borderColor: `${VIP_COLORS.dorado}40` }}>
+              <div className="md:w-80 p-6 border-l" style={{ borderColor: `${VIP_COLORS.oroAurora}40` }}>
                 <h3 
                   className="text-xl font-semibold mb-4"
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 >
                   {selectedPhoto.originalName}
                 </h3>
                 
                 <div className="space-y-3 text-sm">
                   <div>
-                    <span className="font-semibold" style={{ color: VIP_COLORS.verdeBosque }}>Subido por:</span>
+                    <span className="font-semibold" style={{ color: VIP_COLORS.rosaIntensa }}>Subido por:</span>
                     <br />
                     {selectedPhoto.uploaderName}
                   </div>
                   
                   <div>
-                    <span className="font-semibold" style={{ color: VIP_COLORS.verdeBosque }}>Momento:</span>
+                    <span className="font-semibold" style={{ color: VIP_COLORS.rosaIntensa }}>Momento:</span>
                     <br />
                     {selectedPhoto.eventMoment}
                   </div>
                   
                   <div>
-                    <span className="font-semibold" style={{ color: VIP_COLORS.verdeBosque }}>Fecha:</span>
+                    <span className="font-semibold" style={{ color: VIP_COLORS.rosaIntensa }}>Fecha:</span>
                     <br />
                     {formatDate(selectedPhoto.uploadedAt)}
                   </div>
                   
                   <div>
-                    <span className="font-semibold" style={{ color: VIP_COLORS.verdeBosque }}>Tamaño:</span>
+                    <span className="font-semibold" style={{ color: VIP_COLORS.rosaIntensa }}>Tamaño:</span>
                     <br />
                     {formatFileSize(selectedPhoto.size)}
                   </div>
                   
                   {selectedPhoto.comment && (
                     <div>
-                      <span className="font-semibold" style={{ color: VIP_COLORS.verdeBosque }}>Comentario:</span>
+                      <span className="font-semibold" style={{ color: VIP_COLORS.rosaIntensa }}>Comentario:</span>
                       <br />
                       {selectedPhoto.comment}
                     </div>
@@ -605,7 +605,7 @@ const DinamicGallery: React.FC = () => {
                   disabled={isPhotoDeleting(selectedPhoto.id)}
                   className="mt-6 w-full px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                   style={{
-                    background: `linear-gradient(135deg, ${VIP_COLORS.rojoVino}, ${VIP_COLORS.rojoCardenal})`,
+                    background: `linear-gradient(135deg, ${VIP_COLORS.lavandaAurora}, ${VIP_COLORS.lavandaIntensa})`,
                     color: 'white'
                   }}
                 >
@@ -626,8 +626,8 @@ const DinamicGallery: React.FC = () => {
                   onClick={() => setSelectedPhoto(null)}
                   className="mt-3 w-full px-4 py-2 rounded-lg border-2 transition-all duration-300 hover:scale-105"
                   style={{
-                    borderColor: VIP_COLORS.dorado,
-                    color: VIP_COLORS.verdeEsmeralda,
+                    borderColor: VIP_COLORS.oroAurora,
+                    color: VIP_COLORS.rosaAurora,
                     backgroundColor: 'transparent'
                   }}
                 >

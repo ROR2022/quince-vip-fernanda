@@ -34,21 +34,21 @@ interface DeleteConfirmationModalProps {
   isDeleting: boolean;
 }
 
-// Paleta VIP Mexicana
+// Paleta Aurora Pastel para Quinceañera VIP
 const VIP_COLORS = {
-  verdeEsmeralda: '#0D6B4B',
-  rojoVino: '#8B1C26',
-  dorado: '#C2A878',
-  marfil: '#F8F5F0',
-  marfilSuave: '#FAF7F2',
-  verdeOscuro: '#0A5A3C',
-  verdeBosque: '#6B8C5A',
-  rojoCardenal: '#7A1B24',
-  oroAntiguo: '#B8A070'
+  rosaAurora: '#FFB3D9',
+  lavandaAurora: '#E6D9FF',
+  oroAurora: '#FFF2CC',
+  blancoSeda: '#FDFCFC',
+  cremaSuave: '#FAF8F5',
+  rosaIntensa: '#FF8FD1',
+  lavandaIntensa: '#D9CAFF',
+  oroIntensio: '#FFEC99',
+  rosaDelicada: '#FFCCE6'
 };
 
 /**
- * Modal de confirmación para eliminar fotos con diseño VIP
+ * Modal de confirmación para eliminar fotos con diseño Aurora Pastel VIP
  */
 const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
   photo,
@@ -102,8 +102,8 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
       <div 
         className="max-w-md w-full rounded-2xl shadow-2xl overflow-hidden"
         style={{
-          background: `linear-gradient(135deg, ${VIP_COLORS.marfil} 0%, ${VIP_COLORS.marfilSuave} 100%)`,
-          border: `2px solid ${VIP_COLORS.dorado}40`,
+          background: `linear-gradient(135deg, ${VIP_COLORS.blancoSeda} 0%, ${VIP_COLORS.cremaSuave} 100%)`,
+          border: `2px solid ${VIP_COLORS.oroAurora}40`,
           animation: 'slideIn 200ms ease-out'
         }}
         onClick={(e) => e.stopPropagation()}
@@ -112,16 +112,16 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
         <div 
           className="p-6 border-b-2"
           style={{ 
-            borderColor: `${VIP_COLORS.dorado}40`,
-            background: `linear-gradient(135deg, ${VIP_COLORS.verdeEsmeralda}10, ${VIP_COLORS.rojoVino}10)`
+            borderColor: `${VIP_COLORS.oroAurora}40`,
+            background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}10, ${VIP_COLORS.lavandaAurora}10)`
           }}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div 
-                className="w-12 h-12 rounded-full flex items-center justify-center"
+                className="w-12 h-12 rounded-full flex items-center justify-center vip-pulse-aurora"
                 style={{
-                  background: `linear-gradient(135deg, ${VIP_COLORS.rojoVino}, ${VIP_COLORS.rojoCardenal})`
+                  background: `linear-gradient(135deg, ${VIP_COLORS.lavandaAurora}, ${VIP_COLORS.lavandaIntensa})`
                 }}
               >
                 <AlertTriangle size={24} color="white" />
@@ -129,13 +129,13 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
               <div>
                 <h3 
                   className="text-xl font-semibold"
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 >
                   ¿Eliminar foto?
                 </h3>
                 <p 
                   className="text-sm opacity-75"
-                  style={{ color: VIP_COLORS.verdeBosque }}
+                  style={{ color: VIP_COLORS.rosaIntensa }}
                 >
                   Esta acción no se puede deshacer
                 </p>
@@ -147,8 +147,8 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
                 onClick={onClose}
                 className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
                 style={{
-                  backgroundColor: `${VIP_COLORS.dorado}20`,
-                  color: VIP_COLORS.verdeBosque
+                  backgroundColor: `${VIP_COLORS.oroAurora}20`,
+                  color: VIP_COLORS.rosaIntensa
                 }}
                 aria-label="Cerrar modal"
               >
@@ -164,20 +164,20 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
           <div 
             className="p-4 rounded-lg border"
             style={{
-              backgroundColor: VIP_COLORS.marfilSuave,
-              borderColor: `${VIP_COLORS.dorado}30`
+              backgroundColor: VIP_COLORS.cremaSuave,
+              borderColor: `${VIP_COLORS.oroAurora}30`
             }}
           >
             <div className="space-y-2 text-sm">
               <div>
                 <span 
                   className="font-semibold"
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 >
                   Archivo:
                 </span>
                 <br />
-                <span style={{ color: VIP_COLORS.verdeBosque }}>
+                <span style={{ color: VIP_COLORS.rosaIntensa }}>
                   {photo.originalName}
                 </span>
               </div>
@@ -185,12 +185,12 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
               <div>
                 <span 
                   className="font-semibold"
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 >
                   Subido por:
                 </span>
                 <br />
-                <span style={{ color: VIP_COLORS.verdeBosque }}>
+                <span style={{ color: VIP_COLORS.rosaIntensa }}>
                   {photo.uploaderName}
                 </span>
               </div>
@@ -198,12 +198,12 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
               <div>
                 <span 
                   className="font-semibold"
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 >
                   Momento:
                 </span>
                 <br />
-                <span style={{ color: VIP_COLORS.verdeBosque }}>
+                <span style={{ color: VIP_COLORS.rosaIntensa }}>
                   {photo.eventMoment}
                 </span>
               </div>
@@ -212,14 +212,14 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
                 <div>
                   <span 
                     className="font-semibold"
-                    style={{ color: VIP_COLORS.verdeEsmeralda }}
+                    style={{ color: VIP_COLORS.rosaAurora }}
                   >
                     Tamaño:
                   </span>
                   <br />
                   <span 
                     className="text-xs"
-                    style={{ color: VIP_COLORS.verdeBosque }}
+                    style={{ color: VIP_COLORS.rosaIntensa }}
                   >
                     {formatFileSize(photo.size)}
                   </span>
@@ -228,14 +228,14 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
                 <div>
                   <span 
                     className="font-semibold"
-                    style={{ color: VIP_COLORS.verdeEsmeralda }}
+                    style={{ color: VIP_COLORS.rosaAurora }}
                   >
                     Fecha:
                   </span>
                   <br />
                   <span 
                     className="text-xs"
-                    style={{ color: VIP_COLORS.verdeBosque }}
+                    style={{ color: VIP_COLORS.rosaIntensa }}
                   >
                     {formatDate(photo.uploadedAt)}
                   </span>
@@ -248,12 +248,12 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
           <div 
             className="p-3 rounded-lg border-l-4 text-sm"
             style={{
-              backgroundColor: `${VIP_COLORS.rojoVino}10`,
-              borderColor: VIP_COLORS.rojoVino,
-              color: VIP_COLORS.rojoCardenal
+              backgroundColor: `${VIP_COLORS.lavandaAurora}10`,
+              borderColor: VIP_COLORS.lavandaAurora,
+              color: VIP_COLORS.lavandaIntensa
             }}
           >
-            <strong>⚠️ Advertencia:</strong> Esta foto será eliminada permanentemente de la galería de la boda.
+            <strong>⚠️ Advertencia:</strong> Esta foto será eliminada permanentemente de la galería de la quinceañera.
           </div>
         </div>
 
@@ -261,8 +261,8 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
         <div 
           className="p-6 border-t-2 flex space-x-3"
           style={{ 
-            borderColor: `${VIP_COLORS.dorado}40`,
-            background: `linear-gradient(135deg, ${VIP_COLORS.marfilSuave} 0%, ${VIP_COLORS.marfil} 100%)`
+            borderColor: `${VIP_COLORS.oroAurora}40`,
+            background: `linear-gradient(135deg, ${VIP_COLORS.cremaSuave} 0%, ${VIP_COLORS.blancoSeda} 100%)`
           }}
         >
           {/* Botón Cancelar */}
@@ -271,8 +271,8 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
             disabled={isDeleting}
             className="flex-1 px-4 py-3 rounded-lg border-2 font-semibold transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             style={{
-              borderColor: VIP_COLORS.dorado,
-              color: VIP_COLORS.verdeEsmeralda,
+              borderColor: VIP_COLORS.oroAurora,
+              color: VIP_COLORS.rosaAurora,
               backgroundColor: 'transparent'
             }}
           >
@@ -283,9 +283,9 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
           <button
             onClick={handleConfirm}
             disabled={isDeleting}
-            className="flex-1 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center space-x-2"
+            className="flex-1 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center space-x-2 vip-shimmer-aurora"
             style={{
-              background: `linear-gradient(135deg, ${VIP_COLORS.rojoVino}, ${VIP_COLORS.rojoCardenal})`
+              background: `linear-gradient(135deg, ${VIP_COLORS.lavandaAurora}, ${VIP_COLORS.lavandaIntensa})`
             }}
           >
             {isDeleting ? (

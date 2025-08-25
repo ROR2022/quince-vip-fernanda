@@ -180,22 +180,22 @@ const FotoUploader: React.FC = () => {
     <section
       className="py-16 px-4 relative overflow-hidden"
       style={{
-        background: `linear-gradient(135deg, ${VIP_COLORS.marfil} 0%, ${VIP_COLORS.marfilSuave} 50%, ${VIP_COLORS.marfil} 100%)`,
+        background: `linear-gradient(135deg, ${VIP_COLORS.blancoSeda} 0%, ${VIP_COLORS.cremaSuave} 50%, ${VIP_COLORS.blancoSeda} 100%)`,
       }}
     >
-      {/* Elementos decorativos VIP */}
+      {/* Elementos decorativos Aurora Pastel */}
       <div className="absolute inset-0 opacity-5">
         <div
-          className="absolute top-10 left-10 w-32 h-32 rounded-full"
-          style={{ backgroundColor: VIP_COLORS.verdeEsmeralda }}
+          className="absolute top-10 left-10 w-32 h-32 rounded-full vip-pulse-aurora"
+          style={{ backgroundColor: VIP_COLORS.rosaAurora }}
         ></div>
         <div
-          className="absolute bottom-10 right-10 w-24 h-24 rounded-full"
-          style={{ backgroundColor: VIP_COLORS.rojoVino }}
+          className="absolute bottom-10 right-10 w-24 h-24 rounded-full vip-shimmer-aurora"
+          style={{ backgroundColor: VIP_COLORS.lavandaAurora }}
         ></div>
         <div
-          className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full"
-          style={{ backgroundColor: VIP_COLORS.dorado }}
+          className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full vip-float-aurora"
+          style={{ backgroundColor: VIP_COLORS.oroAurora }}
         ></div>
       </div>
 
@@ -242,17 +242,17 @@ const FotoUploader: React.FC = () => {
               >
                 <RefreshCw
                   size={16}
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                 />
               </button>
             )}
           </div>
 
           <div
-            className="inline-block text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-xl border-2"
+            className="inline-block text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-xl border-2 vip-shimmer-aurora"
             style={{
-              background: `linear-gradient(135deg, ${VIP_COLORS.verdeEsmeralda}, ${VIP_COLORS.rojoVino})`,
-              borderColor: `${VIP_COLORS.dorado}40`,
+              background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.lavandaAurora})`,
+              borderColor: `${VIP_COLORS.oroAurora}40`,
             }}
           >
             📸 Comparte tus Fotos
@@ -260,21 +260,21 @@ const FotoUploader: React.FC = () => {
 
           <h2
             className="text-4xl md:text-5xl font-light mb-4"
-            style={{ color: VIP_COLORS.verdeEsmeralda }}
+            style={{ color: VIP_COLORS.rosaAurora }}
           >
             Galería Colaborativa
           </h2>
 
           <p
             className="text-xl mb-2 font-medium"
-            style={{ color: VIP_COLORS.verdeBosque }}
+            style={{ color: VIP_COLORS.rosaIntensa }}
           >
-            Ayúdanos a crear una galería única de nuestra boda
+            Ayúdanos a crear una galería única de nuestra quinceañera
           </p>
 
           <p
             className="max-w-2xl mx-auto leading-relaxed"
-            style={{ color: `${VIP_COLORS.verdeEsmeralda}CC` }}
+            style={{ color: `${VIP_COLORS.rosaAurora}CC` }}
           >
             Sube tus fotos favoritas de la celebración. Serán parte de nuestro
             álbum digital especial.
@@ -311,8 +311,8 @@ const FotoUploader: React.FC = () => {
             onClick={openFileSelector}
             className="relative cursor-pointer group transition-all duration-300 hover:scale-[1.02]"
             style={{
-              background: `linear-gradient(135deg, ${VIP_COLORS.marfil} 0%, ${VIP_COLORS.marfilSuave} 100%)`,
-              border: `3px dashed ${VIP_COLORS.dorado}80`,
+              background: `linear-gradient(135deg, ${VIP_COLORS.blancoSeda} 0%, ${VIP_COLORS.cremaSuave} 100%)`,
+              border: `3px dashed ${VIP_COLORS.oroAurora}80`,
               borderRadius: "20px",
               minHeight: "200px",
             }}
@@ -321,32 +321,32 @@ const FotoUploader: React.FC = () => {
             <div
               className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style={{
-                background: `linear-gradient(135deg, ${VIP_COLORS.verdeEsmeralda}10, ${VIP_COLORS.rojoVino}10)`,
+                background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}10, ${VIP_COLORS.lavandaAurora}10)`,
               }}
             />
 
             <div className="relative z-10 flex flex-col items-center justify-center py-12 px-6 text-center">
               {/* Icono principal */}
               <div
-                className="w-20 h-20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                className="w-20 h-20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg vip-pulse-aurora"
                 style={{
-                  background: `linear-gradient(135deg, ${VIP_COLORS.dorado}, ${VIP_COLORS.oroAntiguo})`,
+                  background: `linear-gradient(135deg, ${VIP_COLORS.oroAurora}, ${VIP_COLORS.oroIntensio})`,
                 }}
               >
-                <Camera size={32} style={{ color: VIP_COLORS.verdeOscuro }} />
+                <Camera size={32} style={{ color: VIP_COLORS.rosaIntensa }} />
               </div>
 
               {/* Texto principal */}
               <h3
                 className="text-2xl font-semibold mb-3"
-                style={{ color: VIP_COLORS.verdeEsmeralda }}
+                style={{ color: VIP_COLORS.rosaAurora }}
               >
                 Selecciona tus fotos
               </h3>
 
               <p
                 className="text-lg mb-4"
-                style={{ color: VIP_COLORS.verdeBosque }}
+                style={{ color: VIP_COLORS.rosaIntensa }}
               >
                 Haz clic aquí para elegir las imágenes que quieres compartir
               </p>
@@ -354,7 +354,7 @@ const FotoUploader: React.FC = () => {
               {/* Especificaciones actualizadas */}
               <div
                 className="text-sm opacity-75 space-y-1"
-                style={{ color: VIP_COLORS.verdeOscuro }}
+                style={{ color: VIP_COLORS.lavandaAurora }}
               >
                 <p>📁 Formatos: JPG, PNG, WEBP</p>
                 <p>📏 Tamaño máximo: 10MB por foto</p>
@@ -368,9 +368,9 @@ const FotoUploader: React.FC = () => {
 
               {/* Botón estilizado */}
               <div
-                className="mt-6 px-8 py-3 rounded-full font-medium text-white shadow-lg group-hover:shadow-xl transition-all duration-300"
+                className="mt-6 px-8 py-3 rounded-full font-medium text-white shadow-lg group-hover:shadow-xl transition-all duration-300 vip-shimmer-aurora"
                 style={{
-                  background: `linear-gradient(135deg, ${VIP_COLORS.verdeEsmeralda}, ${VIP_COLORS.verdeBosque})`,
+                  background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.rosaIntensa})`,
                 }}
               >
                 <Upload size={18} className="inline mr-2" />
@@ -385,13 +385,13 @@ const FotoUploader: React.FC = () => {
           <div
             className="p-6 rounded-2xl border-2 shadow-lg mb-8"
             style={{
-              background: `linear-gradient(135deg, ${VIP_COLORS.marfilSuave} 0%, ${VIP_COLORS.marfil} 100%)`,
-              borderColor: `${VIP_COLORS.dorado}60`,
+              background: `linear-gradient(135deg, ${VIP_COLORS.cremaSuave} 0%, ${VIP_COLORS.blancoSeda} 100%)`,
+              borderColor: `${VIP_COLORS.oroAurora}60`,
             }}
           >
             <h3
               className="text-xl font-semibold mb-4 flex items-center"
-              style={{ color: VIP_COLORS.verdeEsmeralda }}
+              style={{ color: VIP_COLORS.rosaAurora }}
             >
               <ImageIcon size={20} className="mr-2" />
               Fotos Seleccionadas ({selectedFiles.length})
@@ -430,7 +430,7 @@ const FotoUploader: React.FC = () => {
                     <div className="absolute top-2 left-2 flex items-center gap-1">
                       <CheckCircle
                         size={20}
-                        style={{ color: VIP_COLORS.verdeEsmeralda }}
+                        style={{ color: VIP_COLORS.rosaAurora }}
                       />
                       {systemType === "cloudinary" && (
                         <Cloud size={16} className="text-blue-500" />
@@ -442,7 +442,7 @@ const FotoUploader: React.FC = () => {
                     <div className="absolute inset-0 bg-red-500/20 flex items-center justify-center">
                       <AlertCircle
                         size={24}
-                        style={{ color: VIP_COLORS.rojoVino }}
+                        style={{ color: VIP_COLORS.lavandaAurora }}
                       />
                     </div>
                   )}
@@ -458,7 +458,7 @@ const FotoUploader: React.FC = () => {
                         removeFile(index);
                       }}
                       className="absolute top-2 right-2 w-6 h-6 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
-                      style={{ backgroundColor: VIP_COLORS.rojoVino }}
+                      style={{ backgroundColor: VIP_COLORS.lavandaAurora }}
                     >
                       <X size={14} />
                     </button>
@@ -479,17 +479,17 @@ const FotoUploader: React.FC = () => {
           <div
             className="p-4 rounded-lg border-l-4 mb-6"
             style={{
-              backgroundColor: `${VIP_COLORS.rojoVino}10`,
-              borderColor: VIP_COLORS.rojoVino,
+              backgroundColor: `${VIP_COLORS.lavandaAurora}10`,
+              borderColor: VIP_COLORS.lavandaAurora,
             }}
           >
             <div className="flex items-center">
               <AlertCircle
                 size={20}
-                style={{ color: VIP_COLORS.rojoVino }}
+                style={{ color: VIP_COLORS.lavandaAurora }}
                 className="mr-2"
               />
-              <p style={{ color: VIP_COLORS.rojoVino }}>{uploadState.error}</p>
+              <p style={{ color: VIP_COLORS.lavandaAurora }}>{uploadState.error}</p>
             </div>
           </div>
         )}
@@ -499,21 +499,21 @@ const FotoUploader: React.FC = () => {
           <div
             className="p-6 rounded-2xl border-l-4 mb-6 shadow-lg"
             style={{
-              backgroundColor: `${VIP_COLORS.verdeEsmeralda}10`,
-              borderColor: VIP_COLORS.verdeEsmeralda,
+              backgroundColor: `${VIP_COLORS.rosaAurora}10`,
+              borderColor: VIP_COLORS.rosaAurora,
             }}
           >
             <div className="flex items-start justify-between">
               <div className="flex items-center flex-1">
                 <CheckCircle
                   size={24}
-                  style={{ color: VIP_COLORS.verdeEsmeralda }}
+                  style={{ color: VIP_COLORS.rosaAurora }}
                   className="mr-3 flex-shrink-0"
                 />
                 <div>
                   <p
                     className="text-lg font-semibold mb-1"
-                    style={{ color: VIP_COLORS.verdeEsmeralda }}
+                    style={{ color: VIP_COLORS.rosaAurora }}
                   >
                     ¡Fotos subidas exitosamente!
                   </p>
@@ -521,9 +521,9 @@ const FotoUploader: React.FC = () => {
                     <div className="flex items-center gap-2 text-sm">
                       <Clock
                         size={16}
-                        style={{ color: VIP_COLORS.verdeBosque }}
+                        style={{ color: VIP_COLORS.rosaIntensa }}
                       />
-                      <span style={{ color: VIP_COLORS.verdeBosque }}>
+                      <span style={{ color: VIP_COLORS.rosaIntensa }}>
                         Preparando para más fotos en{" "}
                         <strong>{countdown}</strong> segundo
                         {countdown !== 1 ? "s" : ""}...
@@ -532,7 +532,7 @@ const FotoUploader: React.FC = () => {
                   ) : (
                     <p
                       className="text-sm"
-                      style={{ color: VIP_COLORS.verdeBosque }}
+                      style={{ color: VIP_COLORS.rosaIntensa }}
                     >
                       {systemType === "cloudinary"
                         ? "☁️ Guardadas en la nube"
@@ -547,9 +547,9 @@ const FotoUploader: React.FC = () => {
                 <div className="flex items-center gap-2 ml-4">
                   <button
                     onClick={accelerateReset}
-                    className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
+                    className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 vip-pulse-aurora"
                     style={{
-                      backgroundColor: VIP_COLORS.verdeEsmeralda,
+                      backgroundColor: VIP_COLORS.rosaAurora,
                       color: "white",
                     }}
                     title="Subir más fotos ahora"
@@ -562,8 +562,8 @@ const FotoUploader: React.FC = () => {
                     onClick={cancelAutoReset}
                     className="px-3 py-2 rounded-lg text-sm font-medium border-2 transition-all duration-200 hover:scale-105"
                     style={{
-                      borderColor: VIP_COLORS.dorado,
-                      color: VIP_COLORS.verdeBosque,
+                      borderColor: VIP_COLORS.oroAurora,
+                      color: VIP_COLORS.rosaIntensa,
                       backgroundColor: "transparent",
                     }}
                     title="Cancelar reinicio automático"
@@ -580,12 +580,12 @@ const FotoUploader: React.FC = () => {
               <div className="mt-4">
                 <div
                   className="h-2 rounded-full overflow-hidden"
-                  style={{ backgroundColor: `${VIP_COLORS.dorado}20` }}
+                  style={{ backgroundColor: `${VIP_COLORS.oroAurora}20` }}
                 >
                   <div
-                    className="h-full transition-all duration-1000 ease-linear"
+                    className="h-full transition-all duration-1000 ease-linear vip-shimmer-aurora"
                     style={{
-                      backgroundColor: VIP_COLORS.verdeEsmeralda,
+                      backgroundColor: VIP_COLORS.rosaAurora,
                       width: `${
                         ((AUTO_RESET_DELAY - countdown) / AUTO_RESET_DELAY) *
                         100
@@ -603,13 +603,13 @@ const FotoUploader: React.FC = () => {
           <div
             className="p-6 rounded-2xl border-2 shadow-lg"
             style={{
-              background: `linear-gradient(135deg, ${VIP_COLORS.marfil} 0%, ${VIP_COLORS.marfilSuave} 100%)`,
-              borderColor: `${VIP_COLORS.dorado}60`,
+              background: `linear-gradient(135deg, ${VIP_COLORS.blancoSeda} 0%, ${VIP_COLORS.cremaSuave} 100%)`,
+              borderColor: `${VIP_COLORS.oroAurora}60`,
             }}
           >
             <h3
               className="text-xl font-semibold mb-4"
-              style={{ color: VIP_COLORS.verdeEsmeralda }}
+              style={{ color: VIP_COLORS.rosaAurora }}
             >
               Información Adicional (Opcional)
             </h3>
@@ -619,7 +619,7 @@ const FotoUploader: React.FC = () => {
               <div>
                 <label
                   className="block text-sm font-medium mb-2"
-                  style={{ color: VIP_COLORS.verdeBosque }}
+                  style={{ color: VIP_COLORS.rosaIntensa }}
                 >
                   Tu nombre
                 </label>
@@ -635,8 +635,8 @@ const FotoUploader: React.FC = () => {
                   }
                   className="w-full px-4 py-3 rounded-lg border-2 transition-colors duration-200 focus:outline-none"
                   style={{
-                    borderColor: `${VIP_COLORS.dorado}60`,
-                    backgroundColor: VIP_COLORS.marfilSuave,
+                    borderColor: `${VIP_COLORS.oroAurora}60`,
+                    backgroundColor: VIP_COLORS.cremaSuave,
                   }}
                 />
               </div>
@@ -645,7 +645,7 @@ const FotoUploader: React.FC = () => {
               <div>
                 <label
                   className="block text-sm font-medium mb-2"
-                  style={{ color: VIP_COLORS.verdeBosque }}
+                  style={{ color: VIP_COLORS.rosaIntensa }}
                 >
                   Comentario
                 </label>
@@ -661,8 +661,8 @@ const FotoUploader: React.FC = () => {
                   rows={3}
                   className="w-full px-4 py-3 rounded-lg border-2 transition-colors duration-200 focus:outline-none resize-none"
                   style={{
-                    borderColor: `${VIP_COLORS.dorado}60`,
-                    backgroundColor: VIP_COLORS.marfilSuave,
+                    borderColor: `${VIP_COLORS.oroAurora}60`,
+                    backgroundColor: VIP_COLORS.cremaSuave,
                   }}
                 />
               </div>
@@ -673,9 +673,9 @@ const FotoUploader: React.FC = () => {
               <button
                 onClick={handleUpload}
                 disabled={uploadState.uploading || selectedFiles.length === 0}
-                className="px-8 py-4 rounded-full font-semibold text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="px-8 py-4 rounded-full font-semibold text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none vip-shimmer-aurora"
                 style={{
-                  background: `linear-gradient(135deg, ${VIP_COLORS.verdeEsmeralda}, ${VIP_COLORS.rojoVino})`,
+                  background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.lavandaAurora})`,
                 }}
               >
                 {uploadState.uploading ? (
@@ -699,8 +699,8 @@ const FotoUploader: React.FC = () => {
                     onClick={handleReset}
                     className="ml-4 px-6 py-3 rounded-full font-medium border-2 transition-all duration-300 hover:scale-105"
                     style={{
-                      borderColor: VIP_COLORS.dorado,
-                      color: VIP_COLORS.verdeEsmeralda,
+                      borderColor: VIP_COLORS.oroAurora,
+                      color: VIP_COLORS.rosaAurora,
                       backgroundColor: "transparent",
                     }}
                   >

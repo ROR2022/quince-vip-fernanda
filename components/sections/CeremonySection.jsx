@@ -105,7 +105,7 @@ export default function CeremonySection() {
                   className="space-y-4"
                 >
                   <div 
-                    className="text-8xl font-script mb-4 text-sky-500"
+                    className="text-5xl font-script mb-4 text-sky-500"
                     //style={{ color: 'var(--color-aurora-rosa)' }}
                   >
                     {quinceañera.nickname}

@@ -54,17 +54,17 @@ export const UI_CONFIG = {
   maxPreviewHeight: 200, // px
 };
 
-// Paleta de colores VIP mexicana
+// Paleta de colores Aurora Pastel para Quinceañera VIP
 export const VIP_COLORS = {
-  verdeEsmeralda: '#0D6B4B',
-  rojoVino: '#8B1C26',
-  dorado: '#C2A878',
-  marfil: '#F8F5F0',
-  marfilSuave: '#FAF7F2',
-  verdeOscuro: '#0A5A3C',
-  verdeBosque: '#6B8C5A',
-  rojoCardenal: '#7A1B24',
-  oroAntiguo: '#B8A070'
+  rosaAurora: '#FFB3D9',
+  lavandaAurora: '#E6D9FF',
+  oroAurora: '#FFF2CC',
+  blancoSeda: '#FDFCFC',
+  cremaSuave: '#FAF8F5',
+  rosaIntensa: '#FF8FD1',
+  lavandaIntensa: '#D9CAFF',
+  oroIntensio: '#FFEC99',
+  rosaDelicada: '#FFCCE6'
 };
 
 // Configuración del endpoint
