@@ -1,10 +1,7 @@
 // 👗 DressCodeSection - Sección de código de vestimenta y confirmación
 
 import React from 'react'
-import { Phone } from 'lucide-react'
-import { Button } from '../ui/button'
 import { quinceData } from '../../data/quinceData'
-import { useWhatsApp } from '../../hooks/useWhatsApp'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { getAnimationConfig } from '@/data/animationConfig'
 import { PiCoatHanger } from "react-icons/pi";
@@ -13,7 +10,6 @@ import Image from 'next/image'
 
 export default function DressCodeSection() {
   const { dressCode } = quinceData
-  const { confirmAttendance } = useWhatsApp()
 
   // Configurar animación de scroll
   const animationConfig = getAnimationConfig('dressCode')
@@ -107,38 +103,7 @@ export default function DressCodeSection() {
             </div>
           </div>
 
-          <div 
-            className="rounded-2xl p-8 shadow-xl"
-            style={{
-              background: 'linear-gradient(to right, rgba(255, 179, 217, 0.1), rgba(248, 246, 240, 1), rgba(230, 217, 255, 0.1))',
-              border: '2px solid rgba(255, 242, 204, 0.3)'
-            }}
-          >
-            <h3 
-              className="text-3xl font-bold mb-6"
-              style={{ color: 'var(--color-aurora-lavanda)' }}
-            >
-              💌 Confirma tu asistencia
-            </h3>
-            <p 
-              className="text-xl mb-6"
-              style={{ color: 'var(--color-aurora-rosa)' }}
-            >
-              {dressCode.confirmationMessage}
-            </p>
-            <Button
-              onClick={confirmAttendance}
-              size="lg"
-              className="text-white rounded-full px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg"
-              style={{
-                background: 'linear-gradient(to right, var(--color-aurora-lavanda), var(--color-aurora-oro), var(--color-aurora-rosa))',
-                border: '2px solid rgba(255, 242, 204, 0.3)'
-              }}
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              📱 Confirmar
-            </Button>
-          </div>
+          
         </div>
       </div>
     </section>

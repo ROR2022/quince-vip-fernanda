@@ -2,9 +2,9 @@
 // 📁 components/ActionButtons.tsx
 // ================================================================
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ActionButtonsProps } from '../types/invitation.types';
-import { generateWhatsAppMessage } from '../utils/invitation.utils';
+import { sendWhatsAppInvitationWithRegistration } from '../utils/invitation.utils';
 
 /**
  * Componente para los botones de acción principal
@@ -15,6 +15,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
   onTogglePreview,
   onDownload,
 }) => {
+  const [isSending, setIsSending] = useState(false);
+
   // Verificar si todos los campos requeridos están completos
   const isFormComplete = !!(
     formData.guestName &&
@@ -24,19 +26,34 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
     formData.whatsappNumber.replace(/\D/g, "").length === 10
   );
 
-  // Función para enviar por WhatsApp
-  const sendWhatsAppInvitation = (): void => {
+  // Función para enviar por WhatsApp con registro automático en BD
+  const sendWhatsAppInvitation = async (): Promise<void> => {
     if (!isFormComplete) {
       alert("Por favor completa todos los campos obligatorios");
       return;
     }
 
-    const message = generateWhatsAppMessage(formData);
-    const cleanNumber = formData.whatsappNumber.replace(/\D/g, "");
-    const mexicanNumber = `${cleanNumber}`;
-    const whatsappURL = `https://wa.me/521${mexicanNumber}?text=${encodeURIComponent(message)}`;
+    setIsSending(true);
     
-    window.open(whatsappURL, "_blank");
+    try {
+      const success = await sendWhatsAppInvitationWithRegistration(formData);
+      
+      if (success) {
+        // Mostrar mensaje de éxito más detallado
+        console.log(`✅ ¡Perfecto! 
+
+📱 Invitación enviada a ${formData.guestName} por WhatsApp
+📝 Registrado automáticamente en el sistema de gestión
+🎯 Ahora puedes ver este invitado en la sección "Gestión de Invitados"`);
+      } else {
+        console.error("❌ La invitación se abrió en WhatsApp, pero hubo un problema al registrar en el sistema. Puedes registrar manualmente en 'Gestión de Invitados'.");
+      }
+    } catch (error) {
+      console.error('Error al enviar invitación:', error);
+      console.error("❌ Error inesperado. Por favor intenta nuevamente.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -48,7 +65,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
         disabled={!isFormComplete}
         className={`flex-1 py-4 px-6 rounded-xl font-bold shadow-xl transition-all duration-300 flex items-center justify-center gap-3 border-2 ${
           isFormComplete
-            ? "bg-gradient-to-r from-verde-esmeralda to-verde-bosque hover:from-verde-bosque hover:to-verde-esmeralda text-white border-verde-esmeralda/30 hover:scale-105 hover:shadow-2xl"
+            ? "bg-gradient-to-r from-verde-esmeralda to-verde-bosque hover:from-verde-bosque hover:to-verde-esmeralda text-black border-verde-esmeralda/30 hover:scale-105 hover:shadow-2xl"
             : "bg-gradient-to-r from-gray-400 to-gray-500 text-gray-200 border-gray-300 cursor-not-allowed"
         }`}
         title={!isFormComplete ? "Completa todos los campos para ver la vista previa" : ""}
@@ -65,16 +82,26 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
       <button
         type="button"
         onClick={sendWhatsAppInvitation}
-        disabled={!isFormComplete}
+        disabled={!isFormComplete || isSending}
         className={`flex-1 py-4 px-6 rounded-xl font-bold shadow-xl transition-all duration-300 flex items-center justify-center gap-3 border-2 ${
-          isFormComplete
-            ? "bg-gradient-to-r from-rojo-vino to-rojo-cardenal hover:from-rojo-cardenal hover:to-rojo-vino text-white border-rojo-vino/30 hover:scale-105 hover:shadow-2xl"
+          isFormComplete && !isSending
+            ? "bg-gradient-to-r from-rojo-vino to-rojo-cardenal hover:from-rojo-cardenal hover:to-rojo-vino text-black border-rojo-vino/30 hover:scale-105 hover:shadow-2xl"
             : "bg-gradient-to-r from-gray-400 to-gray-500 text-gray-200 border-gray-300 cursor-not-allowed"
         }`}
-        title={!isFormComplete ? "Completa todos los campos para enviar por WhatsApp" : ""}
+        title={
+          !isFormComplete 
+            ? "Completa todos los campos para enviar por WhatsApp" 
+            : isSending 
+            ? "Enviando invitación..." 
+            : "Enviar por WhatsApp y registrar automáticamente"
+        }
       >
-        <span className="text-lg">📱</span>
-        <span className="text-sm md:text-base">Enviar por WhatsApp</span>
+        <span className="text-lg">
+          {isSending ? "⏳" : "📱"}
+        </span>
+        <span className="text-sm md:text-base">
+          {isSending ? "Enviando..." : "Enviar por WhatsApp"}
+        </span>
       </button>
 
       {/* Botón Descargar Imagen VIP */}

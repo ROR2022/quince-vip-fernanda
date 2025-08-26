@@ -7,13 +7,14 @@ import { EventInfo, RelationOption } from '../types/invitation.types';
 export const ADMIN_PASSWORD = "admin1234";
 
 export const EVENT_INFO: EventInfo = {
+  quinceaneraName: "Fernanda",
   groomName: "Godofredo",
   brideName: "Maribel",
   date: "Sábado 6 de Diciembre 2025",
   time: "6:00 PM",
   venue: "Eventos Casablanca",
   dressCode: "Formal -Rosa solo la festejada-",
-  invitationUrl: "https://boda-vip-maribel-godofredo.vercel.app/"
+  invitationUrl: "https://quince-vip-fernanda.vercel.app/"
 } as const;
 
 export const SUGGESTED_MESSAGES = [

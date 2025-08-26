@@ -74,12 +74,12 @@ export const TRANSFORMATIONS = {
 
 // Configuración específica para la boda VIP
 export const CLOUDINARY_CONFIG = {
-  folder: 'boda-maribel-godofredo',
-  tags: ['boda', 'invitados', 'maribel-godofredo', 'vip'],
+  folder: process.env.CLOUDINARY_FOLDER || 'carpeta_temporal',
+  tags: (process.env.CLOUDINARY_TAGS || 'invitacion,evento,vip').split(','),
   maxFileSize: 10 * 1024 * 1024, // 10MB
   allowedFormats: ['jpg', 'jpeg', 'png', 'webp'],
   autoOptimize: true,
-  uploadPreset: process.env.CLOUDINARY_UPLOAD_PRESET || 'boda_vip_preset',
+  uploadPreset: process.env.CLOUDINARY_UPLOAD_PRESET || 'new_upload_preset',
 };
 
 // Utilidad para generar URLs optimizadas

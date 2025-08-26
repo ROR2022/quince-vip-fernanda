@@ -9,6 +9,7 @@ import DateSection from "../components/sections/DateSection"
 import CeremonySection from "../components/sections/CeremonySection"
 import TimelineSection from "../components/sections/TimelineSection"
 import DressCodeSection from "../components/sections/DressCodeSection"
+import AttendanceConfirmation from "../components/sections/AttendanceConfirmation"
 //import GallerySection from "../components/sections/GallerySection"
 import AudioPlayer from "../components/AudioPlayer"
 import BasicCTA from "../components/sections/BasicCTA"
@@ -74,6 +75,7 @@ export default function QuinceInvitation() {
       <PremiumGallery />
       
       <DressCodeSection />
+      <AttendanceConfirmation />
       {/* <GiftsSection /> */}
       {/* <GallerySection /> */}
       <CustomInvitations />

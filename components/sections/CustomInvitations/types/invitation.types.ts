@@ -37,6 +37,7 @@ export interface RelationOption {
 }
 
 export interface EventInfo {
+  quinceaneraName: string;
   groomName: string;
   brideName: string;
   date: string;

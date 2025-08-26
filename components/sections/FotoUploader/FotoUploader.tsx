@@ -240,16 +240,13 @@ const FotoUploader: React.FC = () => {
                   systemType === "cloudinary" ? "servidor local" : "nube"
                 }`}
               >
-                <RefreshCw
-                  size={16}
-                  style={{ color: VIP_COLORS.rosaAurora }}
-                />
+                <RefreshCw size={16} style={{ color: VIP_COLORS.rosaAurora }} />
               </button>
             )}
           </div>
 
           <div
-            className="inline-block text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-xl border-2 vip-shimmer-aurora"
+            className="inline-block text-black px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-xl border-2"
             style={{
               background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.lavandaAurora})`,
               borderColor: `${VIP_COLORS.oroAurora}40`,
@@ -273,28 +270,28 @@ const FotoUploader: React.FC = () => {
           </p>
 
           <p
-            className="max-w-2xl mx-auto leading-relaxed"
-            style={{ color: `${VIP_COLORS.rosaAurora}CC` }}
+            className="max-w-2xl mx-auto leading-relaxed text-purple-400"
+            //style={{ color: `${VIP_COLORS.rosaAurora}CC` }}
           >
             Sube tus fotos favoritas de la celebración. Serán parte de nuestro
             álbum digital especial.
           </p>
         </div>
         <div className="flex justify-center items-center gap-4 mb-8">
-        <Link
-          href="/gallery"
-          className="flex items-center px-4 py-2 border-2 rounded-lg transition-all duration-300 hover:scale-105"
-        >
-          <Camera size={18} className="mr-2" />
-          Ir a Galería
-        </Link>
-        <Link
-          href="/"
-          className="flex items-center px-4 py-2 border-2 rounded-lg transition-all duration-300 hover:scale-105"
-        >
-          <ImageIcon size={18} className="mr-2" />
-          Ver Invitación
-        </Link>
+          <Link
+            href="/gallery"
+            className="flex items-center px-4 py-2 border-2 rounded-lg transition-all duration-300 hover:scale-105"
+          >
+            <Camera size={18} className="mr-2" />
+            Ir a Galería
+          </Link>
+          <Link
+            href="/"
+            className="flex items-center px-4 py-2 border-2 rounded-lg transition-all duration-300 hover:scale-105"
+          >
+            <ImageIcon size={18} className="mr-2" />
+            Ver Invitación
+          </Link>
         </div>
         {/* Input File Elegante */}
         <div className="mb-8">
@@ -353,8 +350,8 @@ const FotoUploader: React.FC = () => {
 
               {/* Especificaciones actualizadas */}
               <div
-                className="text-sm opacity-75 space-y-1"
-                style={{ color: VIP_COLORS.lavandaAurora }}
+                className="text-sm opacity-75 space-y-1 text-purple-400"
+                //style={{ color: VIP_COLORS.lavandaAurora }}
               >
                 <p>📁 Formatos: JPG, PNG, WEBP</p>
                 <p>📏 Tamaño máximo: 10MB por foto</p>
@@ -368,7 +365,7 @@ const FotoUploader: React.FC = () => {
 
               {/* Botón estilizado */}
               <div
-                className="mt-6 px-8 py-3 rounded-full font-medium text-white shadow-lg group-hover:shadow-xl transition-all duration-300 vip-shimmer-aurora"
+                className="mt-6 px-8 py-3 rounded-full font-medium text-black shadow-lg group-hover:shadow-xl transition-all duration-300"
                 style={{
                   background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.rosaIntensa})`,
                 }}
@@ -489,7 +486,9 @@ const FotoUploader: React.FC = () => {
                 style={{ color: VIP_COLORS.lavandaAurora }}
                 className="mr-2"
               />
-              <p style={{ color: VIP_COLORS.lavandaAurora }}>{uploadState.error}</p>
+              <p style={{ color: VIP_COLORS.lavandaAurora }}>
+                {uploadState.error}
+              </p>
             </div>
           </div>
         )}
@@ -673,7 +672,7 @@ const FotoUploader: React.FC = () => {
               <button
                 onClick={handleUpload}
                 disabled={uploadState.uploading || selectedFiles.length === 0}
-                className="px-8 py-4 rounded-full font-semibold text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none vip-shimmer-aurora"
+                className="px-8 py-4 rounded-full font-semibold text-black shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 style={{
                   background: `linear-gradient(135deg, ${VIP_COLORS.rosaAurora}, ${VIP_COLORS.lavandaAurora})`,
                 }}
