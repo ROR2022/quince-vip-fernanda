@@ -16,6 +16,7 @@ const page = async ({params}: {params: {id: string}}) => {
     
     // Validar que el ID sea válido (formato básico)
     if (!id || id.trim() === '' || id === 'undefined' || id === 'null') {
+        console.error('❌ ID de invitado inválido:', id);
       return <ErrorDisplay type="invalid-id" guestId={id} />;
     }
 
@@ -32,14 +33,17 @@ const page = async ({params}: {params: {id: string}}) => {
     // Manejar errores de red/servidor
     if (!response.ok) {
       if (response.status === 404) {
+        console.error('❌ Invitado no encontrado:', id);
         return <ErrorDisplay type="not-found" guestId={id} />;
       } else if (response.status >= 500) {
+        console.error('❌ Error en el servidor:', response.statusText);
         return <ErrorDisplay 
           type="server" 
           message={`Error ${response.status}: ${response.statusText}`}
           guestId={id}
         />;
       } else {
+        console.error('❌ Error desconocido:', response.statusText);
         return <ErrorDisplay 
           type="unknown" 
           message={`Error ${response.status}: ${response.statusText}`}
@@ -53,6 +57,7 @@ const page = async ({params}: {params: {id: string}}) => {
 
     // Manejar respuesta de API con error
     if (!success) {
+        console.error('❌ Error en la respuesta de la API:', error);
       return <ErrorDisplay 
         type="unknown" 
         message={error || 'Error en la respuesta de la API'}
@@ -62,10 +67,12 @@ const page = async ({params}: {params: {id: string}}) => {
 
     // Verificar que existan los datos del invitado
     if (!data) {
+        console.error('❌ Datos del invitado no encontrados:', id);
       return <ErrorDisplay type="not-found" guestId={id} />;
     }
 
     // Renderizar el componente exitoso
+    console.log('✅ Datos del invitado cargados:', data);
     return <GuestDetails dataGuest={data} />;
 
   } catch (error) {
