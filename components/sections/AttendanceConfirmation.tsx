@@ -398,7 +398,7 @@ ${formData.mensaje ? `💌 *Mensaje especial:*\n${formData.mensaje}` : ''}
                 size="lg"
                 type="submit"
                 disabled={isSubmitting || showSuccess}
-                className="relative overflow-hidden text-white rounded-full px-12 py-5 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-500 text-lg font-semibold group min-w-[200px] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+                className="relative overflow-hidden text-white rounded-full py-8 px-8 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-500 text-lg font-semibold group min-w-[200px] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
                 style={{
                   background: showSuccess 
                     ? "linear-gradient(135deg, #4ade80, #22c55e, #16a34a)" 
@@ -423,7 +423,7 @@ ${formData.mensaje ? `💌 *Mensaje especial:*\n${formData.mensaje}` : ''}
                   ) : (
                     <>
                       <Phone className="w-5 h-5 mr-3 group-hover:animate-bounce" />
-                      <h6 className="text-purple-700 flex flex-col gap-1 py-2">
+                      <h6 className="text-purple-700 flex flex-col md:flex-row gap-2 items-center justify-center">
                         <span>✨ Confirmar</span>  
                         <span>Asistencia</span>
                       </h6>
