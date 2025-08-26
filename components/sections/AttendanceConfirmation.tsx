@@ -423,7 +423,7 @@ ${formData.mensaje ? `💌 *Mensaje especial:*\n${formData.mensaje}` : ''}
                   ) : (
                     <>
                       <Phone className="w-5 h-5 mr-3 group-hover:animate-bounce" />
-                      <span className="text-purple-700">✨ Confirmar Asistencia</span>
+                      <span className="text-purple-700 flex flex-col">✨ Confirmar Asistencia</span>
                     </>
                   )}
                 </div>
